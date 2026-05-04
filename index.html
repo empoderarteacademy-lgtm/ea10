@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empoderarte Academy — Descripción del curso</title>
+  <style>
+    /* Reset para iframe */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      overflow-x: hidden;
+    }
+    /* Notificar al padre el alto real del contenido */
+  </style>
+  <script>
+    // Enviar altura al padre para que Tiendup ajuste el iframe automáticamente
+    function sendHeight() {
+      const h = document.body.scrollHeight;
+      window.parent.postMessage({ type: 'iframeHeight', height: h }, '*');
+    }
+    window.addEventListener('load', sendHeight);
+    window.addEventListener('resize', sendHeight);
+    // Fallback: enviar cada 500ms los primeros 3 segundos
+    let count = 0;
+    const interval = setInterval(() => {
+      sendHeight();
+      count++;
+      if (count > 6) clearInterval(interval);
+    }, 500);
+  </script>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== BASE v10 ===== */
+#ea10 {
+  font-family: 'Nunito', sans-serif;
+  color: #1a1a2e;
+  background: #fff;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0;
+}
+
+#ea10 * { box-sizing: border-box; }
+#ea10 h2, #ea10 h3, #ea10 p { margin: 0; }
+
+/* ===== CONTENEDORES ===== */
+.ea10-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.ea10-inner-wide {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ===== SECCIONES ===== */
+.ea10-section {
+  padding: 80px 24px;
+}
+
+.ea10-section-alt {
+  padding: 80px 24px;
+  background: #faf7fa;
+}
+
+.ea10-section-dark {
+  padding: 80px 24px;
+  background: #0f0818;
+  color: #fff;
+}
+
+/* ===== GANCHO SUPERIOR ===== */
+.ea10-hook {
+  background: linear-gradient(135deg, #0f0818 60%, #3d0a28);
+  padding: 70px 24px;
+  color: #fff;
+  text-align: center;
+}
+
+.ea10-hook-eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e91e8c;
+  margin-bottom: 20px;
+}
+
+.ea10-hook-headline {
+  font-size: clamp(24px, 2.8vw, 36px);
+  font-weight: 900;
+  line-height: 1.25;
+  margin-bottom: 24px;
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+  text-wrap: balance;
+  word-break: keep-all;
+}
+
+.ea10-hook-sub {
+  font-size: 17px;
+  opacity: 0.85;
+  max-width: 620px;
+  margin: 0 auto 36px;
+  line-height: 1.6;
+}
+
+.ea10-hook-stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.ea10-stat {
+  text-align: center;
+}
+
+.ea10-stat-num {
+  font-size: 32px;
+  font-weight: 900;
+  color: #e91e8c;
+  display: block;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.ea10-stat-label {
+  font-size: 13px;
+  opacity: 0.75;
+  font-weight: 600;
+}
+
+/* ===== TITULARES DE SECCION ===== */
+.ea10-h2 {
+  font-size: clamp(24px, 2.8vw, 34px);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.ea10-h2-accent {
+  width: 60px;
+  height: 4px;
+  background: #e91e8c;
+  margin: 0 auto 44px;
+  border-radius: 2px;
+}
+
+/* ===== STACK DE VALOR ===== */
+.ea10-stack {
+  background: #faf7fa;
+  border: 1px solid #ede5ec;
+  border-radius: 14px;
+  padding: 40px 36px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ea10-stack-title {
+  font-size: 20px;
+  font-weight: 900;
+  color: #1a1a2e;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.ea10-stack-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #ede5ec;
+  font-size: 15px;
+}
+
+.ea10-stack-row:last-of-type {
+  border-bottom: none;
+}
+
+.ea10-stack-item {
+  color: #444;
+}
+
+.ea10-stack-price {
+  font-weight: 700;
+  color: #888;
+  white-space: nowrap;
+}
+
+.ea10-stack-total {
+  margin-top: 20px;
+  padding: 20px 24px;
+  background: #0f0818;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ea10-stack-total-label {
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.ea10-stack-total-price {
+  text-align: right;
+}
+
+.ea10-stack-total-was {
+  font-size: 13px;
+  color: #888;
+  text-decoration: line-through;
+  display: block;
+}
+
+.ea10-stack-total-now {
+  font-size: 24px;
+  font-weight: 900;
+  color: #e91e8c;
+  display: block;
+}
+
+/* ===== CARDS (diferenciales) ===== */
+.ea10-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.ea10-card {
+  padding: 34px 28px;
+  background: #fff;
+  border: 1px solid #ede5ec;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ea10-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(15, 8, 24, 0.07);
+}
+
+.ea10-card-icon {
+  font-size: 28px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.ea10-card-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 10px;
+}
+
+.ea10-card-text {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== TEAM GRID ===== */
+.ea10-team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.ea10-team-card {
+  padding: 36px 32px;
+  background: #fff;
+  border: 1px solid #ede5ec;
+  border-radius: 12px;
+}
+
+.ea10-team-title {
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #1a1a2e;
+}
+
+.ea10-team-card p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 14px;
+  line-height: 1.65;
+}
+
+.ea10-team-card p:last-child { margin-bottom: 0; }
+
+.ea10-team-card strong { color: #e91e8c; font-weight: 800; }
+
+/* ===== OBJECIONES ===== */
+.ea10-obj {
+  padding: 16px 18px;
+  margin-bottom: 10px;
+  background: #faf7fa;
+  border-left: 3px solid #e91e8c;
+  border-radius: 0 8px 8px 0;
+}
+
+.ea10-obj-q {
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.ea10-obj-a {
+  color: #555;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* ===== BONUS GRID ===== */
+.ea10-bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.ea10-bonus-card {
+  padding: 24px 20px;
+  background: #fff;
+  border: 2px solid #e91e8c;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.ea10-bonus-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.ea10-bonus-name {
+  font-size: 14px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 6px;
+}
+
+.ea10-bonus-desc {
+  font-size: 12px;
+  color: #777;
+  line-height: 1.4;
+}
+
+/* ===== PARA QUIÉN ===== */
+.ea10-forwhom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.ea10-forwhom-box {
+  padding: 32px 28px;
+  border-radius: 12px;
+}
+
+.ea10-forwhom-yes {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.ea10-forwhom-no {
+  background: #fff7f7;
+  border: 1px solid #fecaca;
+}
+
+.ea10-forwhom-title {
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 16px;
+}
+
+.ea10-forwhom-yes .ea10-forwhom-title { color: #166534; }
+.ea10-forwhom-no .ea10-forwhom-title { color: #991b1b; }
+
+.ea10-forwhom-item {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+  padding-left: 24px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.ea10-forwhom-item::before {
+  position: absolute;
+  left: 0;
+  font-weight: 800;
+}
+
+.ea10-forwhom-yes .ea10-forwhom-item::before { content: "✓"; color: #16a34a; }
+.ea10-forwhom-no .ea10-forwhom-item::before { content: "✗"; color: #dc2626; }
+
+/* ===== CTA FINAL ===== */
+.ea10-cta-wrap {
+  text-align: center;
+}
+
+.ea10-cta-title {
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.ea10-cta-sub {
+  font-size: 17px;
+  opacity: 0.85;
+  margin-bottom: 36px;
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ea10-btn {
+  display: inline-block;
+  padding: 20px 44px;
+  background: #e91e8c;
+  color: #fff !important;
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 18px rgba(233, 30, 140, 0.4);
+}
+
+.ea10-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(233, 30, 140, 0.55);
+}
+
+.ea10-btn-wrap { margin-bottom: 16px; }
+
+.ea10-micro {
+  font-size: 13px;
+  opacity: 0.7;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.ea10-disclaimer {
+  font-size: 11px;
+  opacity: 0.5;
+  margin-top: 14px;
+  line-height: 1.5;
+  font-style: italic;
+  color: #fff;
+}
+
+/* ===== DIVISOR ===== */
+.ea10-divider {
+  width: 100%;
+  height: 1px;
+  background: #ede5ec;
+  margin: 8px 0;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 700px) {
+
+  .ea10-section,
+  .ea10-section-alt,
+  .ea10-section-dark,
+  .ea10-hook { padding: 60px 18px; }
+
+  .ea10-hook-stats { gap: 24px; }
+
+  .ea10-cards,
+  .ea10-team-grid,
+  .ea10-forwhom { grid-template-columns: 1fr; gap: 16px; }
+
+  .ea10-bonus-grid { grid-template-columns: 1fr 1fr; }
+
+  .ea10-card,
+  .ea10-team-card { padding: 24px 20px; }
+
+  .ea10-stack { padding: 28px 20px; }
+
+  .ea10-btn {
+    display: block;
+    text-align: center;
+    padding: 18px 20px;
+    font-size: 16px;
+  }
+
+  .ea10-h2-accent { margin-bottom: 36px; }
+}
+
+@media (max-width: 400px) {
+  .ea10-bonus-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+
+<div id="ea10">
+
+<!-- ===== GANCHO SUPERIOR ===== -->
+<section class="ea10-hook">
+  <div class="ea10-inner">
+    <p class="ea10-hook-eyebrow">Empoderarte Academy</p>
+    <h2 class="ea10-hook-headline">La mayoría de los cursos de OnlyFans te enseñan qué hacer. Este te enseña por qué funciona — y esa diferencia lo cambia todo.</h2>
+    <p class="ea10-hook-sub">¿Por qué muchas creadoras que arrancan en OnlyFans desaparecen antes del segundo mes? No es falta de atractivo. Es que nadie les explicó cómo funciona la psicología de quien compra contenido. Eso es exactamente lo que este curso resuelve.</p>
+    <div class="ea10-hook-stats">
+      <div class="ea10-stat">
+        <span class="ea10-stat-num">21</span>
+        <span class="ea10-stat-label">Módulos completos</span>
+      </div>
+      <div class="ea10-stat">
+        <span class="ea10-stat-num">6</span>
+        <span class="ea10-stat-label">Bonus incluidos</span>
+      </div>
+      <div class="ea10-stat">
+        <span class="ea10-stat-num">670+</span>
+        <span class="ea10-stat-label">Páginas de contenido</span>
+      </div>
+      <div class="ea10-stat">
+        <span class="ea10-stat-num">5+</span>
+        <span class="ea10-stat-label">Años de trayectoria</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STACK DE VALOR ===== -->
+<section class="ea10-section">
+  <div class="ea10-inner">
+
+    <h2 class="ea10-h2">Esto es todo lo que recibís hoy</h2>
+    <div class="ea10-h2-accent"></div>
+
+    <div class="ea10-stack">
+      <div class="ea10-stack-title">Lo que incluye este curso</div>
+
+      <div class="ea10-stack-row">
+        <span class="ea10-stack-item">Curso completo — 21 módulos + 670 páginas</span>
+        <span class="ea10-stack-price">$45.000</span>
+      </div>
+      <div class="ea10-stack-row">
+        <span class="ea10-stack-item">🎁 Bonus Reddit completo</span>
+        <span class="ea10-stack-price">$15.000</span>
+      </div>
+      <div class="ea10-stack-row">
+        <span class="ea10-stack-item">🎁 Bonus Twitter / X</span>
+        <span class="ea10-stack-price">$12.000</span>
+      </div>
+      <div class="ea10-stack-row">
+        <span class="ea10-stack-item">🎁 Bonus Tumblr</span>
+        <span class="ea10-stack-price">$8.000</span>
+      </div>
+      <div class="ea10-stack-row">
+        <span class="ea10-stack-item">🎁 Bonus Fotografía profesional con tu teléfono</span>
+        <span class="ea10-stack-price">$20.000</span>
+      </div>
+      <div class="ea10-stack-row">
+        <span class="ea10-stack-item">🎁 Bonus Femdom y Findom</span>
+        <span class="ea10-stack-price">$10.000</span>
+      </div>
+      <div class="ea10-stack-row">
+        <span class="ea10-stack-item">🎁 Guía de precios para maximizar ingresos</span>
+        <span class="ea10-stack-price">$5.000</span>
+      </div>
+
+      <div class="ea10-stack-total">
+        <span class="ea10-stack-total-label">Hoy pagás</span>
+        <div class="ea10-stack-total-price">
+          <span class="ea10-stack-total-was">Valor total: $115.000</span>
+          <span class="ea10-stack-total-now">AR$45.000 / U$S35</span>
+        </div>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top: 18px; font-size: 13px; color: #888;">Argentinos pagan en pesos vía Mercadopago · Resto de LATAM paga en dólares vía PayPal</p>
+
+  </div>
+</section>
+
+<!-- ===== LO QUE NOS DIFERENCIA ===== -->
+<section class="ea10-section-alt">
+  <div class="ea10-inner-wide">
+
+    <h2 class="ea10-h2">Lo que nos diferencia</h2>
+    <div class="ea10-h2-accent"></div>
+
+    <div class="ea10-cards">
+
+      <div class="ea10-card">
+        <span class="ea10-card-icon">🔒</span>
+        <div class="ea10-card-title">Privacidad como prioridad</div>
+        <p class="ea10-card-text">Módulo completo dedicado a las herramientas de privacidad de la plataforma, bloqueo de países y buenas prácticas de seguridad digital.</p>
+      </div>
+
+      <div class="ea10-card">
+        <span class="ea10-card-icon">🧠</span>
+        <div class="ea10-card-title">Neurociencia aplicada</div>
+        <p class="ea10-card-text">Enseñamos la psicología del comprador. Entendés por qué ciertos mensajes funcionan y cómo construir tensión, deseo y fidelidad.</p>
+      </div>
+
+      <div class="ea10-card">
+        <span class="ea10-card-icon">📸</span>
+        <div class="ea10-card-title">Fotografía profesional</div>
+        <p class="ea10-card-text">Módulo creado por un fotógrafo profesional especializado en contenido digital. Técnicas aplicables con los recursos que ya tenés.</p>
+      </div>
+
+      <div class="ea10-card">
+        <span class="ea10-card-icon">⭐</span>
+        <div class="ea10-card-title">5+ años de trayectoria real</div>
+        <p class="ea10-card-text">Equipo activo en la plataforma desde 2020. Cada estrategia que enseñamos fue probada en cuentas reales antes de entrar al curso.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== POR QUÉ FUNCIONA ===== -->
+<section class="ea10-section">
+  <div class="ea10-inner-wide">
+
+    <h2 class="ea10-h2">Enseñamos todo lo que nos llevó años aprender</h2>
+    <div class="ea10-h2-accent"></div>
+
+    <div class="ea10-team-grid">
+
+      <div class="ea10-team-card">
+        <div class="ea10-team-title">Entendés el porqué, no solo el qué</div>
+        <p>Aplicamos neurociencia y psicología del comprador a cada módulo.</p>
+        <p>Entendés cómo se activa el deseo en quien compra contenido. Entendés por qué ciertos mensajes funcionan y otros no. Entendés cómo construir tensión, urgencia y fidelidad.</p>
+        <p>Cuando entendés la lógica, podés adaptarla a tu estilo, tu nicho y tu audiencia.</p>
+        <p><strong>Eso es lo que hace que una creadora escale. No el contenido. La estrategia detrás del contenido.</strong></p>
+      </div>
+
+      <div class="ea10-team-card">
+        <div class="ea10-team-title">🔒 Dudas frecuentes al arrancar</div>
+
+        <div class="ea10-obj">
+          <div class="ea10-obj-q">"Me preocupa la privacidad"</div>
+          <div class="ea10-obj-a">Dedicamos un módulo completo a las herramientas de privacidad de la plataforma, al bloqueo de países desde la configuración de la cuenta, y a buenas prácticas de seguridad digital.</div>
+        </div>
+
+        <div class="ea10-obj">
+          <div class="ea10-obj-q">"No tengo seguidores"</div>
+          <div class="ea10-obj-a">No los necesitás al empezar. Incluimos bonus específicos de Reddit, Twitter y Tumblr con estrategias para construir audiencia desde cero.</div>
+        </div>
+
+        <div class="ea10-obj">
+          <div class="ea10-obj-q">"No tengo cuerpo de modelo"</div>
+          <div class="ea10-obj-a">El enfoque del curso va en otra dirección: cercanía, autenticidad y propuesta de valor por sobre la apariencia.</div>
+        </div>
+
+        <div class="ea10-obj">
+          <div class="ea10-obj-q">"No tengo equipo ni ropa especial"</div>
+          <div class="ea10-obj-a">El módulo de fotografía está pensado para trabajar con los recursos que ya tenés, incluido tu teléfono.</div>
+        </div>
+
+        <div class="ea10-obj">
+          <div class="ea10-obj-q">"No tengo experiencia"</div>
+          <div class="ea10-obj-a">El curso arranca desde cero y avanza de forma progresiva, sin asumir conocimientos previos.</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== BONUS ===== -->
+<section class="ea10-section-alt">
+  <div class="ea10-inner-wide">
+
+    <h2 class="ea10-h2">6 bonus incluidos sin costo adicional</h2>
+    <div class="ea10-h2-accent"></div>
+
+    <div class="ea10-bonus-grid">
+
+      <div class="ea10-bonus-card">
+        <span class="ea10-bonus-icon">🗂️</span>
+        <div class="ea10-bonus-name">Reddit</div>
+        <p class="ea10-bonus-desc">Estrategia completa para construir audiencia orgánica y gratuita desde los subreddits correctos.</p>
+      </div>
+
+      <div class="ea10-bonus-card">
+        <span class="ea10-bonus-icon">🐦</span>
+        <div class="ea10-bonus-name">Twitter / X</div>
+        <p class="ea10-bonus-desc">Cómo crecer rápido y convertir seguidores en suscriptores de pago sin mostrar el rostro.</p>
+      </div>
+
+      <div class="ea10-bonus-card">
+        <span class="ea10-bonus-icon">🌀</span>
+        <div class="ea10-bonus-name">Tumblr</div>
+        <p class="ea10-bonus-desc">Audiencia específica, fiel y con alta intención de compra. Nicho con baja competencia.</p>
+      </div>
+
+      <div class="ea10-bonus-card">
+        <span class="ea10-bonus-icon">📷</span>
+        <div class="ea10-bonus-name">Fotografía profesional</div>
+        <p class="ea10-bonus-desc">Iluminación, ángulos y edición. Resultados de calidad usando solo tu teléfono.</p>
+      </div>
+
+      <div class="ea10-bonus-card">
+        <span class="ea10-bonus-icon">👑</span>
+        <div class="ea10-bonus-name">Femdom y Findom</div>
+        <p class="ea10-bonus-desc">Guía para dominar uno de los nichos más rentables y exclusivos de la plataforma.</p>
+      </div>
+
+      <div class="ea10-bonus-card">
+        <span class="ea10-bonus-icon">💰</span>
+        <div class="ea10-bonus-name">Guía de precios</div>
+        <p class="ea10-bonus-desc">Cómo fijar lo que cobrás para maximizar ingresos sin alejar a tus fans.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== PARA QUIÉN ES Y NO ES ===== -->
+<section class="ea10-section">
+  <div class="ea10-inner-wide">
+
+    <h2 class="ea10-h2">¿Este curso es para vos?</h2>
+    <div class="ea10-h2-accent"></div>
+
+    <div class="ea10-forwhom">
+
+      <div class="ea10-forwhom-box ea10-forwhom-yes">
+        <div class="ea10-forwhom-title">✓ Sí es para vos si...</div>
+        <div class="ea10-forwhom-item">Querés construir un ingreso digital propio, en tus términos y con tu tiempo.</div>
+        <div class="ea10-forwhom-item">Buscás entender la lógica detrás de las ventas, no solo seguir pasos ciegos.</div>
+        <div class="ea10-forwhom-item">Elegís no mostrar el rostro y querés aprender a trabajar desde esa decisión.</div>
+        <div class="ea10-forwhom-item">No tenés seguidores previos y necesitás construir audiencia desde cero.</div>
+        <div class="ea10-forwhom-item">Estás dispuesta a aplicar lo que aprendés con constancia y criterio propio.</div>
+      </div>
+
+      <div class="ea10-forwhom-box ea10-forwhom-no">
+        <div class="ea10-forwhom-title">✗ No es para vos si...</div>
+        <div class="ea10-forwhom-item">Buscás enriquecerte en una semana sin esfuerzo.</div>
+        <div class="ea10-forwhom-item">Esperás un manual de 10 páginas con "los trucos secretos".</div>
+        <div class="ea10-forwhom-item">No estás dispuesta a aplicar psicología y neuromarketing en tu estrategia.</div>
+        <div class="ea10-forwhom-item">Pensás que OnlyFans es solo subir fotos y esperar que el dinero llegue solo.</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== QUIÉNES SOMOS ===== -->
+<section class="ea10-section-alt">
+  <div class="ea10-inner">
+
+    <h2 class="ea10-h2">¿Quién está detrás de este curso?</h2>
+    <div class="ea10-h2-accent"></div>
+
+    <div class="ea10-team-card" style="max-width:680px; margin: 0 auto;">
+      <p>No somos un equipo de marketing que compró un curso y lo revende.</p>
+      <p>Somos un equipo con más de 5 años de trayectoria activa en la plataforma y un fotógrafo profesional especializado en contenido digital. Cada estrategia que enseñamos fue probada en cuentas reales antes de entrar al curso.</p>
+      
+      <p><strong>Cuando entendés el porqué, podés adaptar cualquier técnica a tu estilo, tu nicho y tu audiencia. Eso es lo que hace que una creadora escale. No el contenido. La estrategia detrás del contenido.</strong></p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CTA FINAL ===== -->
+<section class="ea10-section-dark">
+  <div class="ea10-inner ea10-cta-wrap">
+
+    <h2 class="ea10-cta-title">La libertad financiera no se espera — se construye.</h2>
+    <p class="ea10-cta-sub">Empezá hoy. Acceso inmediato y sin suscripción mensual.</p>
+
+    <div class="ea10-btn-wrap">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;" class="ea10-btn">
+        Quiero empezar hoy — AR$45.000 / U$S35
+      </a>
+    </div>
+
+    <p class="ea10-micro">Argentinos pagan en pesos vía Mercadopago · Resto de LATAM paga en dólares vía PayPal</p>
+    <p class="ea10-micro" style="margin-top:8px;">Pagás una sola vez · 21 módulos + 6 bonus · Contenido descargable</p>
+    <p class="ea10-disclaimer">Los resultados dependen del trabajo y la dedicación de cada persona. El curso provee método, herramientas y buenas prácticas.</p>
+
+  </div>
+</section>
+
+</div>
+</body>
+</html>
