@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: transparent; font-family: 'DM Sans', sans-serif; }
+.wrap {
+  background: linear-gradient(135deg, #0f0818, #2d0a1e);
+  border-radius: 14px;
+  padding: 32px 28px;
+  color: #fff;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #e91e8c;
+  margin-bottom: 14px;
+}
+.headline {
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 900;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+.headline em { color: #e91e8c; font-style: normal; }
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.pill {
+  background: rgba(233,30,140,0.12);
+  border: 1px solid rgba(233,30,140,0.35);
+  color: #f9a8d4;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+.prices {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.price-box {
+  flex: 1;
+  min-width: 140px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.price-region {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 4px;
+}
+.price-amount {
+  font-size: 22px;
+  font-weight: 900;
+  color: #e91e8c;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.price-method {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+}
+/* Resize parent */
+script { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">Empoderarte Academy</div>
+  <div class="headline">
+    No enseñamos qué hacer.<br>
+    <em>Enseñamos por qué funciona.</em>
+  </div>
+  <div class="pills">
+    <span class="pill">21 módulos</span>
+    <span class="pill">6 bonus</span>
+    <span class="pill">Reddit · Twitter · Tumblr</span>
+    <span class="pill">Fotografía profesional</span>
+    <span class="pill">Femdom / Findom</span>
+    <span class="pill">🔒 Privacidad total</span>
+    <span class="pill">👤 Sin mostrar el rostro</span>
+  </div>
+  <div class="prices">
+    <div class="price-box">
+      <div class="price-region">Argentina</div>
+      <div class="price-amount">AR$45.000</div>
+      <div class="price-method">vía Mercadopago</div>
+    </div>
+    <div class="price-box">
+      <div class="price-region">Resto de LATAM</div>
+      <div class="price-amount">U$S35</div>
+      <div class="price-method">vía PayPal</div>
+    </div>
+  </div>
+</div>
+<script>
+function sendH() {
+  window.parent.postMessage({ type: 'iframeHeight', height: document.body.scrollHeight }, '*');
+}
+window.addEventListener('load', sendH);
+window.addEventListener('resize', sendH);
+</script>
+</body>
+</html>
