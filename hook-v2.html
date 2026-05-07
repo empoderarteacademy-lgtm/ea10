@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: transparent; font-family: 'DM Sans', sans-serif; overflow-x: hidden; }
+
+.wrap {
+  background: linear-gradient(160deg, #0f0818 60%, #2d0a1e);
+  border-radius: 14px;
+  padding: 36px 32px;
+  color: #fff;
+  width: 100%;
+}
+
+/* EYEBROW */
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: #e91e8c;
+  margin-bottom: 14px;
+}
+
+/* HEADLINE */
+.headline {
+  font-size: clamp(20px, 2.8vw, 28px);
+  font-weight: 900;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+.headline em { color: #e91e8c; font-style: normal; }
+
+/* SUBHEAD — el gancho neurociencia */
+.subhead {
+  font-size: 14px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.65;
+  margin-bottom: 24px;
+  max-width: 560px;
+}
+.subhead strong { color: #f9a8d4; font-weight: 700; }
+
+/* DIVISOR */
+.divider {
+  width: 48px;
+  height: 3px;
+  background: #e91e8c;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+/* DOLORES — 3 items compactos */
+.pains {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 26px;
+}
+.pain {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(233,30,140,0.2);
+  border-radius: 10px;
+  padding: 14px 14px;
+}
+.pain-icon { font-size: 18px; margin-bottom: 7px; display: block; }
+.pain-text { font-size: 12px; color: rgba(255,255,255,0.75); line-height: 1.5; }
+.pain-text strong { color: #f9a8d4; display: block; font-size: 12px; margin-bottom: 3px; }
+
+/* PILLS */
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 26px;
+}
+.pill {
+  background: rgba(233,30,140,0.1);
+  border: 1px solid rgba(233,30,140,0.3);
+  color: #f9a8d4;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 11px;
+  border-radius: 999px;
+}
+
+/* PRECIOS */
+.prices {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.price-box {
+  flex: 1;
+  min-width: 130px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.price-region {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 4px;
+}
+.price-amount {
+  font-size: 22px;
+  font-weight: 900;
+  color: #e91e8c;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.price-method {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+}
+
+/* CTA */
+.cta-btn {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: #e91e8c;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 18px rgba(233,30,140,0.4);
+  transition: transform 0.15s, box-shadow 0.15s;
+  letter-spacing: 0.2px;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(233,30,140,0.55); }
+
+.disclaimer {
+  font-size: 10px;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .wrap { padding: 28px 20px; }
+  .pains { grid-template-columns: 1fr; gap: 8px; }
+  .prices { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="eyebrow">Empoderarte Academy</div>
+
+  <div class="headline">
+    No enseñamos qué hacer.<br>
+    <em>Enseñamos por qué funciona.</em>
+  </div>
+
+  <p class="subhead">
+    La mayoría no fracasa por falta de esfuerzo. Fracasa porque
+    <strong>nadie le explicó cómo procesa una decisión de compra la mente de un suscriptor</strong>.
+    Cuando entendés eso, todo cambia — el mensaje, el contenido, la fidelización.
+  </p>
+
+  <div class="divider"></div>
+
+  <div class="pains">
+    <div class="pain">
+      <span class="pain-icon">📉</span>
+      <div class="pain-text">
+        <strong>Arrancás con ganas</strong>
+        Subís contenido, esperás. Pasan los días. Nada.
+      </div>
+    </div>
+    <div class="pain">
+      <span class="pain-icon">🔁</span>
+      <div class="pain-text">
+        <strong>Copiás lo que ves</strong>
+        Hacés lo mismo que otras. Pero sin entender por qué funciona para ellas.
+      </div>
+    </div>
+    <div class="pain">
+      <span class="pain-icon">🧱</span>
+      <div class="pain-text">
+        <strong>El techo aparece pronto</strong>
+        Los primeros fans llegan. Pero no crecés. No sabés qué cambiar.
+      </div>
+    </div>
+  </div>
+
+  <div class="pills">
+    <span class="pill">21 módulos + 670 páginas</span>
+    <span class="pill">6 bonus</span>
+    <span class="pill">Reddit · Twitter · Tumblr</span>
+    <span class="pill">Fotografía profesional</span>
+    <span class="pill">Femdom / Findom</span>
+    <span class="pill">🔒 Privacidad total</span>
+    <span class="pill">👤 Sin mostrar el rostro</span>
+  </div>
+
+  <div class="prices">
+    <div class="price-box">
+      <div class="price-region">Argentina</div>
+      <div class="price-amount">AR$45.000</div>
+      <div class="price-method">vía Mercadopago</div>
+    </div>
+    <div class="price-box">
+      <div class="price-region">Resto de LATAM</div>
+      <div class="price-amount">U$S35</div>
+      <div class="price-method">vía PayPal</div>
+    </div>
+  </div>
+
+  <button class="cta-btn" onclick="window.parent.scrollTo({top:0,behavior:'smooth'})">
+    Quiero empezar hoy →
+  </button>
+
+  <p class="disclaimer">
+    Los resultados dependen del trabajo y la dedicación de cada persona.
+    El curso provee método, herramientas y buenas prácticas educativas.
+  </p>
+
+</div>
+<script>
+function sendH() {
+  var h = document.documentElement.scrollHeight;
+  window.parent.postMessage({ type: 'iframeHeight', height: h }, '*');
+}
+window.addEventListener('load', sendH);
+window.addEventListener('resize', sendH);
+setTimeout(sendH, 300);
+</script>
+</body>
+</html>
